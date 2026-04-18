@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FeedBack.master.cs" Inherits="WebApplication2.FeedBack" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <style>
+
+   body 
+  {
+    margin: 0;
+    font-family: Arial;
+    background: #f2f2f2;
+}
+
+
+.header 
+{
+    background: linear-gradient(to right, purple, blue);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+.navbar 
+{
+    background: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar a 
+{
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover
+{
+    color: yellow;
+}
+
+
+.main-content 
+{
+    padding: 20px;
+}
+
+
+.footer
+{
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+    </style>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+          <form id="form1" runat="server">
+         <div class="main">
+               <div>
+               <header class="header">
+               <h1>My Feedback System</h1>
+               </header>
+               </div>
+                <div class="links">
+                  <nav class="navbar">
+                  <a href="Home_feedback.aspx">Home</a>
+                  <a href="FeedBack.aspx">Feedback</a>
+                  <a href="Brand_awareness_feedback.aspx">Brand Awareness </a>
+                  <a href="Glassdoor_feedback.aspx">Glassdoor</a>
+                  </nav>
+                 </div>
+          
+                 <div>
+                  
+                  <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                  </asp:ContentPlaceHolder>
+                 </div>
+                <div>
+                  <footer class="footer">
+                   <p>© 2026 Feedback System | All Rights Reserved</p>
+                   </footer>
+                </div>
+           
+            
+            </div>
+    </form>
+</body>
+</html>
