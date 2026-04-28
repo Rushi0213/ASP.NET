@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ecomerce_webpage.master.cs" Inherits="WebApplication2.Ecomerce_webpage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        #main
+        {
+            height:1500px;
+            width:1300px;
+            border:double;
+            background-color:hotpink;
+        }
+        #header
+        {
+            height:100px;
+            width:1280px;
+            border-style:groove;
+            border-color:aqua;
+          
+
+        }
+        #links
+        {
+            height:50px;
+            width:1297px;
+            border:dotted;
+            text-align:center;
+            padding-top:20px;
+            background-color:gainsboro;
+           
+
+
+        }
+        #content
+        {
+            border:groove;
+            height:1300px;
+            width:1278px;
+            margin-left:10px;
+           margin-top:10px;
+            
+
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+       
+        <div id="main">
+            <div id=" header">
+                <center>
+                <img  src="data:image/png;base64,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" height="100px" width="950px" />
+                    </center>
+            </div>
+            <div id="links">
+                 <a href="Home.aspx">Home</a>
+                <a href="Fashion.aspx">Fashion</a>
+                <a href="Beauty.aspx">Beauty</a>
+                <a href="Men.aspx">Men</a>
+                <a href="Women.aspx"> Women</a>
+                 <a href="Kids.aspx">Kids</a>
+                 <a href="GenZ.aspx">GenZ</a>
+            </div>
+                      <div id="content">
+                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                         </asp:ContentPlaceHolder>
+                      </div>
+        
+            </div>
+           
+    </form>
+</body>
+</html>
